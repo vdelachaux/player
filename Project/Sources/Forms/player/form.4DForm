@@ -12,9 +12,11 @@
 	"rightMargin": 20,
 	"bottomMargin": 20,
 	"events": [
-		"onLoad"
+		"onLoad",
+		"onUnload",
+		"onTimer"
 	],
-	"windowTitle": "window title",
+	"windowTitle": "Player",
 	"destination": "detailScreen",
 	"pages": [
 		{
@@ -27,7 +29,7 @@
 					"left": 20,
 					"top": 20,
 					"width": 293,
-					"height": 224,
+					"height": 219,
 					"events": [
 						"onClick",
 						"onHeaderClick",
@@ -42,6 +44,9 @@
 					"currentItemPositionSource": "Form:C1466.position",
 					"selectedItemsSource": "Form:C1466.selected",
 					"focusable": false,
+					"selectionMode": "none",
+					"scrollbarHorizontal": "hidden",
+					"scrollbarVertical": "automatic",
 					"columns": [
 						{
 							"header": {
@@ -59,9 +64,9 @@
 				"play": {
 					"type": "button",
 					"text": "Play",
-					"top": 264,
-					"left": 101,
-					"width": 50,
+					"top": 259,
+					"left": 53,
+					"width": 60,
 					"height": 20,
 					"events": [
 						"onClick"
@@ -72,20 +77,33 @@
 				"stop": {
 					"type": "button",
 					"text": "Stop",
-					"top": 264,
-					"left": 166,
-					"width": 53,
+					"top": 259,
+					"left": 216,
+					"width": 63,
 					"height": 20,
 					"events": [
 						"onClick"
 					],
 					"method": "ObjectMethods/stop.4dm",
 					"focusable": false
+				},
+				"next": {
+					"type": "button",
+					"text": "Next",
+					"top": 259,
+					"left": 133,
+					"width": 63,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/next.4dm",
+					"focusable": false
 				}
 			}
 		}
 	],
-	"geometryStamp": 30,
+	"geometryStamp": 56,
 	"method": "method.4dm",
 	"editor": {
 		"activeView": "View 1",

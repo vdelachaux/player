@@ -1,4 +1,3 @@
-var $file : 4D:C1709.File
-
-$file:=File:C1566(Form:C1466.current.platformPath; fk platform path:K87:2)  // Unsandboxing
-Form:C1466.player:=4D:C1709.SystemWorker.new("afplay "+$file.path)
+Form:C1466.playlist:=Form:C1466.files.copy()  //.orderBy("name")
+Form:C1466.play:=True:C214
+SET TIMER:C645(-1)
